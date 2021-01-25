@@ -471,5 +471,5 @@ END GROUP
 
 .debug_macro
  *(.debug_macro)
-OUTPUT(project3301.elf elf32-avr)
+OUTPUT(kadai21-22.elf elf32-avr)
 LOAD linker stubs
