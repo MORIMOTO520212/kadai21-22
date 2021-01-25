@@ -25,7 +25,7 @@ int main(void)
 		} else {											// 温湿度センサからの値取得失敗
 			dispData[0] = dispData[1] = dispData[2] = dispData[3] = 0x80;// 「....」を表示データとしてセット
 		}
-		disp.numDisp(dispData);								// 7Segに表示
+		disp.numDisp(dispData);								// 7Segに表示 TM1637Disp.cpp
 		_delay_ms(2000);									// 2秒間待つ
     }
 	return 0;
