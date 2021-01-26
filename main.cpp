@@ -69,8 +69,6 @@ int main(void)
 			disp.numDisp(dispData);							// 7Seg‚É•\Ž¦
 			_delay_ms(2000);								// 2•b‘Ò‚Â
 		}
-		
-		
 	}
 	return 0;
 }
