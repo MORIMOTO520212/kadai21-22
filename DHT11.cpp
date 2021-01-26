@@ -17,7 +17,7 @@
 
 // コンストラクタ
 DHT11::DHT11(void){
-	this->humidity_H = this->humidity_L = this->temperature_H = this->temperature_L = 0xFF;
+	this->humidity_H = this->humidity_L = this->temperature_H = this->temperature_L = this->temperature = 0xFF;
 }
 
 ///////////////////////////////////////////////////////////
@@ -74,6 +74,7 @@ int	DHT11::DHT11Read( void){
 	this->humidity_L    = data[1];	// メンバ変数に湿度（小数点未満）を保存
 	this->temperature_H = data[2];	// メンバ変数に温度（小数点以上）を保存
 	this->temperature_L = data[3];	// メンバ変数に温度（小数点未満）を保存
+	this->temperature = *data;
 	if(( data[0] + data[1] + data[2] + data[3]) != data[4]){// チェックサム照合
 		ret = 1;					// チェックサムNGなら通信エラーとする
 	}
@@ -104,6 +105,10 @@ UCHR	DHT11::getTemperature_H(void){
 ///////////////////////////////////////////////////////////
 UCHR	DHT11::getTemperature_L(void){
 	return	temperature_L;
+}
+
+float	DHT11::getTemperature(UCHR temperature){
+	return	temperature;
 }
 
 ///////////////////////////////////////////////////////////

@@ -33,7 +33,17 @@ TM1637Disp::TM1637Disp(void){
 	this->segPattern[10] = 0x00;			// Blank
 
 }
-
+TM1637Disp::TM1637Disp(UCHR *ptr){
+	TM_DDR |= CLK|DIO;
+	//7セグLED表示パターン設定
+	UCHR *dest = &(this->segPattern[0]);
+	for(int i = 0;i < 128; i++){
+		if(*ptr == 0xFF){
+			break;
+		}
+		*dest ++ = *ptr++;
+	}
+}
 ///////////////////////////////////////////////////////////
 //
 //    TM1637 4桁7セグメントLED表示用関数

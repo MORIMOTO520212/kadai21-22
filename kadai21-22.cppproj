@@ -170,6 +170,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="kadai21-22.png">
+      <SubType>compile</SubType>
+    </None>
     <None Include="README.md">
       <SubType>compile</SubType>
     </None>

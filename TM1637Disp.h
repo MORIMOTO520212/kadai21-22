@@ -67,7 +67,9 @@ class TM1637Disp{
 	void	send( UCHR);			// 8Bitのデータ送信のためのメソッド
   public:
 	TM1637Disp(void);				// コンストラクタ
+	TM1637Disp(UCHR *ptr);
 	void	numDisp( UCHR *ptr);	// 表示メソッド
+	void    numDisp( USHRT num);
 };
 
 #endif /* TM1637DISP_H_ */
