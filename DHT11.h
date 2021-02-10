@@ -59,7 +59,6 @@ class DHT11
 	UCHR	temperature_L;						// 温度データ（小数点未満）
 	UCHR	humidity_H;							// 湿度データ（小数点以上）
 	UCHR	humidity_L;							// 湿度データ（小数点未満）
-	UCHR    temperature;
   public:
 	DHT11(void);								// コンストラクタ
 	int		DHT11Read( void);					// 温湿度データ受信メソッド
